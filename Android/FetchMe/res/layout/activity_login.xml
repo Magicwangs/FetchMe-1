@@ -27,7 +27,8 @@
         android:layout_centerHorizontal="true"
         android:ems="10"
         android:hint="@string/user_name"
-        android:inputType="none" />
+        android:inputType="none"
+        android:text="@string/admin_name" />
 
     <EditText
         android:id="@+id/userPwdEditText"
@@ -37,7 +38,8 @@
         android:layout_centerHorizontal="true"
         android:ems="10"
         android:hint="@string/user_pwd"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:text="@string/admin_pwd" />
 
     <Button
         android:id="@+id/loginButton"
