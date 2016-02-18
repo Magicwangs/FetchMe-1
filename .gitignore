@@ -1,0 +1,12 @@
+# ignore the file end with .o and .a
+# *.[oa]
+# do not ignore the file end with .html
+# !*.html
+# ignore the directory /.git in the current directory
+# /.git/
+
+bin
+build
+Tmp
+.gradle
+.idea
