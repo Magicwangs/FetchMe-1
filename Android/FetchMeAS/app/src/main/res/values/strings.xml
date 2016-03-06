@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FetchMeAS</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="login">Login</string>
+    <string name="action_settings">Settings</string>
+    <string name="user_name">Account</string>
+    <string name="user_pwd">Password</string>
+    <string name="admin_name">admin</string>
+    <string name="admin_pwd">admin</string>
+</resources>

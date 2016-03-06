@@ -10,4 +10,5 @@ build
 Tmp
 .gradle
 .idea
-.zip
+*.zip
+*.tar
