@@ -1,4 +1,4 @@
-package com.cgf.fetchmeas;
+package com.cgf.info;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
