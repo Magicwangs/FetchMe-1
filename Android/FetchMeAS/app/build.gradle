@@ -46,6 +46,8 @@ dependencies {
     compile(name:'info-debug', ext:'aar')
 	//compile 'com.github.JakeWharton:butterknife:butterknife-parent-7.0.1'
 	compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.ikimuhendis:ldrawer:0.1'
+    compile 'com.r0adkll:slidableactivity:2.0.5'
 }
 
 //def libraryGroupId = 'my.group.package'
