@@ -44,10 +44,12 @@ dependencies {
     //compile 'com.google.code.gson:gson:2.4'
     compile 'com.github.google:gson:1.7'
     compile(name:'info-debug', ext:'aar')
-	//compile 'com.github.JakeWharton:butterknife:butterknife-parent-7.0.1'
 	compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.ikimuhendis:ldrawer:0.1'
-    compile 'com.r0adkll:slidableactivity:2.0.5'
+//    compile 'com.r0adkll:slidableactivity:2.0.5'
+    compile 'com.jpardogo.materialtabstrip:library:1.1.0'
+//    compile 'it.neokree:MaterialTabs:0.11'
+//    compile 'com.aurelhubert:ahbottomnavigation:1.0.1'
 }
 
 //def libraryGroupId = 'my.group.package'

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.widget.DrawerLayout;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,6 +16,8 @@ import android.widget.ListView;
 
 import com.ikimuhendis.ldrawer.ActionBarDrawerToggle;
 import com.ikimuhendis.ldrawer.DrawerArrowDrawable;
+
+import butterknife.ButterKnife;
 
 /**
  * Created by chenguanfu on 3/28/2016.
@@ -27,10 +30,25 @@ public class FetchMeActivity extends Activity {
     private DrawerArrowDrawable drawerArrow;
     private boolean drawerArrowColor;
 
+//    @Bind(R.id.contentTextView)
+//    TextView mContentTextView;
+//
+//    @Bind(R.id.tabs)
+//    PagerSlidingTabStrip tabs;
+//    @Bind(R.id.pager)
+//    ViewPager pager;
+//    private MyPagerAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sample);
+        setContentView(R.layout.activity_fetchme);
+        ButterKnife.bind(this);
+
+//        adapter = new MyPagerAdapter(null);
+//        pager.setAdapter(adapter);
+//        tabs.setViewPager(pager);
+
         ActionBar ab = getActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
         ab.setHomeButtonEnabled(true);
@@ -159,5 +177,30 @@ public class FetchMeActivity extends Activity {
     public void onBackPressed() {
         // TODO Auto-generated method stub
         moveTaskToBack(true);
+    }
+
+    public class MyPagerAdapter extends FragmentPagerAdapter {
+
+        private final String[] TITLES = {"Categories", "Home", "Top Paid", "Top Free", "Top Grossing", "Top New Paid",
+                "Top New Free", "Trending"};
+
+        public MyPagerAdapter(android.support.v4.app.FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return TITLES[position];
+        }
+
+        @Override
+        public int getCount() {
+            return TITLES.length;
+        }
+
+        @Override
+        public android.support.v4.app.Fragment getItem(int position) {
+            return SuperAwesomeCardFragment.newInstance(position);
+        }
     }
 }
