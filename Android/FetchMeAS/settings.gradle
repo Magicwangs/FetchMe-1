@@ -1,1 +1,1 @@
-include ':app', ':info', ':tabtest', ':navtest'
+include ':app', ':info', ':tabtest', ':navtest', ':fetchme'

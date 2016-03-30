@@ -3,7 +3,7 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:context="com.cgf.fetchme.activity.FragmentDrawer.OneFragment">
+                tools:context=".activity.FragmentDrawer$TwoFragment">
 
     <TextView
         android:layout_width="wrap_content"
@@ -11,6 +11,6 @@
         android:layout_centerInParent="true"
         android:textSize="40dp"
         android:textStyle="bold"
-        android:text="@string/fragment_one"/>
+        android:text="@string/fragment_two"/>
 
 </RelativeLayout>
