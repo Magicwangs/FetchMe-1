@@ -1,16 +1,18 @@
 package com.cgf.fetchmeas;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.TextView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
-	@Bind(R.id.MainTextView) TextView mMainTextView;
+    private static final String TAG = "MainActivity";
+    @Bind(R.id.MainTextView) TextView mMainTextView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +22,21 @@ public class MainActivity extends AppCompatActivity {
 		ButterKnife.bind(this);
 		mMainTextView.setText("Hello FetchMe");
         
-		Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
+		Intent intent;
+        boolean isLogin = true;
+        if(isLogin == false) {
+            intent = new Intent(this, LoginActivity.class);
+            Log.d(TAG, "choose LoginActivity");
+        }
+        else {
+            intent = new Intent(this, FetchMeActivity.class);
+            Log.d(TAG, "choose FetchMeActivity");
+        }
+        if(intent != null) {
+            startActivity(intent);
+        }
+        else {
+            Log.d(TAG, "No Other Activity");
+        }
     }
 }

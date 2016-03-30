@@ -39,13 +39,21 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:appcompat-v7:23.+'
+    compile 'com.android.support:design:23.+'
     compile 'com.loopj.android:android-async-http:1.4.9'
     //compile 'com.google.code.gson:gson:2.4'
     compile 'com.github.google:gson:1.7'
     compile(name:'info-debug', ext:'aar')
-	//compile 'com.github.JakeWharton:butterknife:butterknife-parent-7.0.1'
 	compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.ikimuhendis:ldrawer:0.1'
+//    compile 'com.r0adkll:slidableactivity:2.0.5'
+    compile 'com.jpardogo.materialtabstrip:library:1.1.0'
+    compile 'com.nshmura:recyclertablayout:0.1.7'
+    compile 'com.ogaclejapan.smarttablayout:library:1.6.0@aar'
+    compile 'com.github.LuckyJayce:ViewPagerIndicator:v1.0.2'
+//    compile 'it.neokree:MaterialTabs:0.11'
+//    compile 'com.aurelhubert:ahbottomnavigation:1.0.1'
 }
 
 //def libraryGroupId = 'my.group.package'

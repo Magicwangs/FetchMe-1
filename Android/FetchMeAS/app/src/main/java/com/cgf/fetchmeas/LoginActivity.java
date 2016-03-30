@@ -69,7 +69,7 @@ public class LoginActivity extends Activity implements OnClickListener {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
-        	AnimalDetails.getDetails();
+		AnimalDetails.getDetails();
 		InitUI();
 	}
 
