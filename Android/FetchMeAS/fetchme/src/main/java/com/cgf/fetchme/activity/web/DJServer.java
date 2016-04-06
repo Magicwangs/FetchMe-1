@@ -1,4 +1,4 @@
-package com.cgf.fetchmeas.web;
+package com.cgf.fetchme.activity.web;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;

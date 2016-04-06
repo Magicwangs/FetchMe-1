@@ -17,7 +17,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.cgf.fetchme.R;
-import com.cgf.fetchmeas.web.DJServer;
+import com.cgf.fetchme.activity.web.DJServer;
 import com.google.gson.Gson;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
@@ -104,7 +104,9 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
         if(mUserName.equals("admin") && mUserPwd.equals("admin")) {
             GoMainUI();
         }
-        LoginOnline(mUserName, mUserPwd);
+        else {
+            LoginOnline(mUserName, mUserPwd);
+        }
         Log.d(TAG, "Login----out----" + "userName=" + mUserName + ",userPwd=" + mUserPwd);
     }
 
