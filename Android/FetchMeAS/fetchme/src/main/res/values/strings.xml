@@ -40,4 +40,7 @@
     <string name="err_msg_name">Enter your full name</string>
     <string name="err_msg_email">Enter valid email address</string>
     <string name="err_msg_password">Enter the password</string>
+    <string name="grid_layout_manager">Grid Layout Manager</string>
+    <string name="linear_layout_manager">Linear Layout Manager</string>
+    <string name="element_text">Element</string>
 </resources>
