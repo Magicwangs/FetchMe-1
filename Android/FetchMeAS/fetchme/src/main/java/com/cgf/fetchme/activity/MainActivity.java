@@ -10,6 +10,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -37,6 +38,17 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
             R.mipmap.ic_launcher,
             R.mipmap.ic_launcher,
     };
+
+    static {
+    	try {
+            Log.d(TAG, "load library----in----");
+            System.loadLibrary("caffe");
+            System.loadLibrary("caffe_jni");
+            Log.d(TAG, "load library----out----");
+        } catch (UnsatisfiedLinkError ule) {
+            Log.d(TAG, ule.toString());
+    	}
+    }
 
     @Bind(R.id.container_toolbar)
     LinearLayout container_toolbar;
