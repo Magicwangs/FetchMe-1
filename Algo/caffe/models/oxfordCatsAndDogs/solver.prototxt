@@ -1,4 +1,4 @@
-net: "models/dog/train_val.prototxt"
+net: "models/oxfordCatsAndDogs/train_val.prototxt"
 test_iter: 1000
 test_interval: 1000
 base_lr: 0.01
@@ -9,6 +9,6 @@ display: 20
 max_iter: 450000
 momentum: 0.9
 weight_decay: 0.0005
-snapshot: 1000
-snapshot_prefix: "models/dog/caffenet_train"
+snapshot: 10000
+snapshot_prefix: "models/oxfordCatsAndDogs/caffenet_train"
 solver_mode: CPU
