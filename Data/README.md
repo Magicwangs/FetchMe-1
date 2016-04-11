@@ -10,7 +10,7 @@ www.baidu.com
 ```
 本数据参考CatsAndDogs的数据集，并对其进行扩充，该数据集可从The Oxford-IIIT Pet Dataset下载而来，该数据集共有25种狗和12种猫，原数据每一类别都约有200多张图片，而本项目的任务是利用CNN来进行种类的识别分类，故需要整理其中的数据扩充，并将整理而来的信息提供客户端展示所用。
 ##种类
-###Abyssinian
+###1# Abyssinian
 阿比西尼亚猫：
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Gustav_chocolate.jpg/235px-Gustav_chocolate.jpg)
@@ -22,7 +22,7 @@ www.baidu.com
 https://zh.wikipedia.org/wiki/%E9%98%BF%E6%AF%94%E8%A5%BF%E5%B0%BC%E4%BA%9A%E7%8C%AB
 ```
 
-###American Bulldog
+###2# American Bulldog
 美国斗牛犬:
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Bulldog2f.jpg/350px-Bulldog2f.jpg)
@@ -34,7 +34,7 @@ https://zh.wikipedia.org/wiki/%E9%98%BF%E6%AF%94%E8%A5%BF%E5%B0%BC%E4%BA%9A%E7%8
 https://zh.wikipedia.org/wiki/%E6%96%97%E7%89%9B%E7%8A%AC
 ```
 
-###American Pit Bull Terrier
+###3# American Pit Bull Terrier
 美国比特斗牛犬
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/American_Pit_Bull_Terrier_-_Seated.jpg/270px-American_Pit_Bull_Terrier_-_Seated.jpg)
@@ -47,7 +47,7 @@ https://zh.wikipedia.org/wiki/%E6%96%97%E7%89%9B%E7%8A%AC
 https://zh.wikipedia.org/wiki/%E7%BE%8E%E5%9C%8B%E6%AF%94%E7%89%B9%E9%AC%A5%E7%89%9B%E7%8A%AC
 ```
 
-###Basset hound
+###4# Basset hound
 巴吉度猎犬
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/BassetHound_profil.jpg/220px-BassetHound_profil.jpg)
@@ -61,7 +61,7 @@ https://zh.wikipedia.org/wiki/%E7%BE%8E%E5%9C%8B%E6%AF%94%E7%89%B9%E9%AC%A5%E7%8
 https://zh.wikipedia.org/wiki/%E5%B7%B4%E5%90%89%E5%BA%A6%E7%8D%B5%E7%8A%AC
 ```
 
-###Beagle
+###5# Beagle
 米格鲁猎兔犬
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Beagle_600.jpg/360px-Beagle_600.jpg)
@@ -74,7 +74,7 @@ https://zh.wikipedia.org/wiki/%E5%B7%B4%E5%90%89%E5%BA%A6%E7%8D%B5%E7%8A%AC
 https://zh.wikipedia.org/wiki/%E5%B0%8F%E7%8D%B5%E7%8A%AC
 ```
 
-#Bengal cat
+###6# Bengal cat
 孟加拉猫
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Bangie_the_Bengal_Cat.jpg/235px-Bangie_the_Bengal_Cat.jpg)
@@ -93,7 +93,7 @@ https://zh.wikipedia.org/wiki/%E5%B0%8F%E7%8D%B5%E7%8A%AC
 https://zh.wikipedia.org/wiki/%E5%AD%9F%E5%8A%A0%E6%8B%89%E8%B2%93
 ```
 
-#Birman
+###7# Birman
 伯曼猫
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Birmanstrofe.jpg/220px-Birmanstrofe.jpg)
@@ -109,7 +109,7 @@ http://baike.baidu.com/view/34543.htm
 https://en.wikipedia.org/wiki/Birman
 ```
 
-#Bombay
+###8# Bombay
 孟买猫
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Bombay_cat.jpg/235px-Bombay_cat.jpg)
@@ -123,7 +123,7 @@ http://baike.baidu.com/view/249403.htm
 https://en.wikipedia.org/wiki/Bombay_cat
 ```
 
-#Boxer
+###9# Boxer
 拳师犬
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Boxer_%28dog%29.jpg/220px-Boxer_%28dog%29.jpg)
@@ -137,7 +137,7 @@ http://baike.baidu.com/view/26721.htm
 https://en.wikipedia.org/wiki/Boxer_(dog)
 ```
 
-#British Shorthair
+###10# British Shorthair
 英国短毛猫
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Mystica_from_British_Empire_Cattery.jpg/235px-Mystica_from_British_Empire_Cattery.jpg)
@@ -155,7 +155,7 @@ http://baike.baidu.com/view/36320.htm
 https://en.wikipedia.org/wiki/British_Shorthair
 ```
 
-#Chihuahua
+###11# Chihuahua
 吉娃娃
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/WhiteTanChihuahua.jpg/270px-WhiteTanChihuahua.jpg)
@@ -169,7 +169,7 @@ http://baike.baidu.com/subview/2315/17816225.htm
 https://en.wikipedia.org/wiki/Chihuahua_(dog)
 ```
 
-#Egyption Mau
+###12# Egyption Mau
 埃及猫
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Egyptian_Mau_Bronze.jpg/235px-Egyptian_Mau_Bronze.jpg)
@@ -185,7 +185,7 @@ http://baike.baidu.com/view/19977.htm
 https://en.wikipedia.org/wiki/Egyptian_Mau
 ```
 
-#English Cocker Spaniel
+###13# English Cocker Spaniel
 英国可卡犬
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Chandler_3.jpg/220px-Chandler_3.jpg)
@@ -200,7 +200,7 @@ http://baike.baidu.com/view/111920.htm
 https://en.wikipedia.org/wiki/English_Cocker_Spaniel
 ```
 
-#English Setter
+###14# English Setter
 英国蹲猎犬
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/EnglishSetter9_fx_wb.jpg/220px-EnglishSetter9_fx_wb.jpg)
@@ -211,7 +211,7 @@ http://baike.baidu.com/view/24809.htm
 https://en.wikipedia.org/wiki/English_Setter
 ```
 
-#German Shorthaired Pointer
+###15# German Shorthaired Pointer
 德国短毛波音达
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Duitse_staande_korthaar_10-10-2.jpg/220px-Duitse_staande_korthaar_10-10-2.jpg)
@@ -222,7 +222,7 @@ http://baike.baidu.com/view/8199463.htm
 https://en.wikipedia.org/wiki/German_Shorthaired_Pointer
 ```
 
-#Great Pyrenees
+###16# Great Pyrenees
 大白熊犬
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Pyreneittenkoira.jpg/270px-Pyreneittenkoira.jpg)
@@ -237,7 +237,7 @@ http://baike.baidu.com/view/27872.htm
 https://en.wikipedia.org/wiki/Great_Pyrenees
 ```
 
-#Havanese
+###17# Havanese
 哈瓦那犬
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/A_Havanese_judging.jpg/220px-A_Havanese_judging.jpg)
@@ -249,7 +249,7 @@ http://baike.baidu.com/view/33886.htm
 https://en.wikipedia.org/wiki/Havanese
 ```
 
-#Japanese Chin
+###18# Japanese Chin
 日本狆
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Jchinadult.jpg/270px-Jchinadult.jpg)
@@ -265,7 +265,7 @@ http://baike.baidu.com/view/34064.htm
 https://en.wikipedia.org/wiki/Japanese_Chin
 ```
 
-#Keeshoud
+###19# Keeshoud
 荷兰毛狮犬
 
 ![](http://e.hiphotos.baidu.com/baike/w%3D268/sign=4c773b48053b5bb5bed727f80ed2d523/adaf2edda3cc7cd9e9530e3a3f01213fb90e91d2.jpg)
@@ -275,7 +275,7 @@ https://en.wikipedia.org/wiki/Japanese_Chin
 http://baike.baidu.com/view/2951.htm
 ```
 
-#Leonberger
+###20#Leonberger
 兰波格犬
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Leonberger_Huendin.JPG/220px-Leonberger_Huendin.JPG)
@@ -286,7 +286,7 @@ http://baike.baidu.com/view/944073.htm
 https://en.wikipedia.org/wiki/Leonberger
 ```
 
-#Maine Coon
+###21# Maine Coon
 缅因猫
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Maine_Coon_cat_by_Tomitheos.JPG/235px-Maine_Coon_cat_by_Tomitheos.JPG)
@@ -301,7 +301,7 @@ http://baike.baidu.com/view/34877.htm
 https://en.wikipedia.org/wiki/Maine_Coon
 ```
 
-#Miniature Pinscher
+###22# Miniature Pinscher
 迷你杜宾犬
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Miniature_pinscher.jpg/220px-Miniature_pinscher.jpg)
@@ -315,7 +315,7 @@ http://baike.baidu.com/view/455555.htm
 https://en.wikipedia.org/wiki/Miniature_Pinscher
 ```
 
-#Newfoundland
+###23# Newfoundland
 纽芬兰犬
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Newfoundland_dog_Smoky.jpg/270px-Newfoundland_dog_Smoky.jpg)
@@ -330,7 +330,7 @@ http://baike.baidu.com/view/28094.htm
 https://en.wikipedia.org/wiki/Newfoundland_(dog)
 ```
 
-#Persian cat
+###24# Persian cat
 波斯猫
 
 ![](https://upload.wikimedia.org/wikipedia/commons/b/b7/Persian_Cat.jpg)
@@ -344,7 +344,7 @@ http://baike.baidu.com/subview/2861/5036145.htm
 https://en.wikipedia.org/wiki/Persian_cat
 ```
 
-#Pomeranian
+###25# Pomeranian
 博美犬
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Pomeranian_600.jpg/270px-Pomeranian_600.jpg)
@@ -358,7 +358,7 @@ http://baike.baidu.com/view/8435.htm
 https://en.wikipedia.org/wiki/Pomeranian_(dog)
 ```
 
-#Pug
+###26# Pug
 巴哥犬
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Fawn_pug_2.5year-old.JPG/270px-Fawn_pug_2.5year-old.JPG)
@@ -373,7 +373,7 @@ http://baike.baidu.com/view/19013.htm
 https://en.wikipedia.org/wiki/Pug
 ```
 
-#Ragdoll
+###27# Ragdoll
 布偶猫
 
 ![](http://c.hiphotos.baidu.com/baike/w%3D268/sign=1fbe081cd7c8a786be2a4d085f08c9c7/38dbb6fd5266d016338536ce912bd40734fa35b3.jpg)
@@ -383,7 +383,7 @@ https://en.wikipedia.org/wiki/Pug
 http://baike.baidu.com/view/34561.htm
 ```
 
-#Russian Blue
+###28# Russian Blue
 俄罗斯蓝猫
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Russian_blue.jpg/235px-Russian_blue.jpg)
@@ -397,7 +397,7 @@ http://baike.baidu.com/view/34615.htm
 https://en.wikipedia.org/wiki/Russian_Blue
 ```
 
-#St. Bernard
+###29# St. Bernard
 圣伯纳犬
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/SanBernardo_Newton.jpg/200px-SanBernardo_Newton.jpg)
@@ -412,7 +412,7 @@ http://baike.baidu.com/view/57156.htm
 https://en.wikipedia.org/wiki/St._Bernard_(dog)
 ```
 
-#Samoyed
+###30# Samoyed
 萨摩耶犬
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Samoyed_600.jpg/250px-Samoyed_600.jpg)
@@ -429,7 +429,7 @@ http://baike.baidu.com/subview/43081/5454396.htm
 https://en.wikipedia.org/wiki/Samoyed_(dog)
 ```
 
-#Scottish Terrier
+###31# Scottish Terrier
 苏格兰梗
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Scotish_terrier_burleska_2005.jpg/220px-Scotish_terrier_burleska_2005.jpg)
@@ -440,7 +440,7 @@ http://baike.baidu.com/view/30140.htm
 https://en.wikipedia.org/wiki/Scottish_Terrier
 ```
 
-#Shiba Inu
+###32# Shiba Inu
 柴犬
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Shiba_Inu.jpg/270px-Shiba_Inu.jpg)
@@ -456,7 +456,7 @@ http://baike.baidu.com/item/%E6%9F%B4%E7%8A%AC/524441
 https://en.wikipedia.org/wiki/Shiba_Inu
 ```
 
-#Siamese cat
+###33# Siamese cat
 暹罗猫
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Siam_lilacpoint.jpg/235px-Siam_lilacpoint.jpg)
@@ -471,7 +471,7 @@ http://baike.baidu.com/item/%E6%9A%B9%E7%BD%97%E7%8C%AB/556082
 https://en.wikipedia.org/wiki/Siamese_cat
 ```
 
-#Sphynx cat
+###34# Sphynx cat
 斯芬克斯猫
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Sphinx2_July_2006.jpg/235px-Sphinx2_July_2006.jpg)
@@ -487,7 +487,7 @@ http://baike.baidu.com/view/34640.htm
 https://en.wikipedia.org/wiki/Sphynx_cat
 ```
 
-#Staffordshire Bull Terrier
+###35# Staffordshire Bull Terrier
 斯塔福郡斗牛㹴
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Another_ideal_staffy.jpg/270px-Another_ideal_staffy.jpg)
@@ -499,7 +499,7 @@ http://baike.baidu.com/view/1977684.htm
 https://en.wikipedia.org/wiki/Staffordshire_Bull_Terrier
 ```
 
-#Soft-coated Wheaten Terrier
+###36# Soft-coated Wheaten Terrier
 爱尔兰软毛梗
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Australian_Grand_Champion_Dancestar_Zero_O_Seven_%22Bondy%22.jpg/220px-Australian_Grand_Champion_Dancestar_Zero_O_Seven_%22Bondy%22.jpg)
@@ -510,7 +510,7 @@ http://baike.baidu.com/view/111842.htm
 https://en.wikipedia.org/wiki/Soft-coated_Wheaten_Terrier
 ```
 
-#Yorkshire Terrier
+###37# Yorkshire Terrier
 约克夏㹴
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Little_tootie.JPG/270px-Little_tootie.JPG)
