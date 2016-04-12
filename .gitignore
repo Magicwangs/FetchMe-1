@@ -12,3 +12,4 @@ Tmp
 .idea
 *.zip
 *.tar
+*.pyc
