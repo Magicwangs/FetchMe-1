@@ -10,6 +10,7 @@ import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -23,6 +24,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Calendar;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
 import cz.msebera.android.httpclient.Header;
 
 /**
@@ -36,11 +39,15 @@ public class TestActivity extends AppCompatActivity {
     private static int CROP_PICTURE = 2;
     private static int CHOOSE_PICTURE = 3;
 
+    @Bind(R.id.TestButton)
+    Button mTestButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
+        ButterKnife.bind(this);
+
         mImageView = (ImageView) findViewById(R.id.testiv);
         Intent getIntent = getIntent();
         String flag = getIntent.getStringExtra("key");
@@ -94,21 +101,26 @@ public class TestActivity extends AppCompatActivity {
     }
 
     public void goResult(View view) {
+        mTestButton.setClickable(false);
         DJServer.uploadImage("uploadImage/", null, new TextHttpResponseHandler() {
             @Override
             public void onFailure(int i, Header[] headers, String response, Throwable throwable) {
                 Log.d(TAG, "uploadImage----onFailure----in----");
-                Toast.makeText(getApplicationContext(), "test failure",
-                        Toast.LENGTH_SHORT).show();
+                mTestButton.setText("test failure");
+                //                Toast.makeText(getApplicationContext(), "test failure",
+                //                        Toast.LENGTH_SHORT).show();
                 Log.d(TAG, "uploadImage----onFailure----out----");
+                mTestButton.setClickable(true);
             }
 
             @Override
             public void onSuccess(int i, Header[] headers, String response) {
                 Log.d(TAG, "uploadImage----onSuccess----in----");
-                Toast.makeText(getApplicationContext(), "test success result is" + response,
-                        Toast.LENGTH_LONG).show();
+                mTestButton.setText("test success result is" + response);
+//                Toast.makeText(getApplicationContext(), "test success result is" + response,
+//                        Toast.LENGTH_LONG).show();
                 Log.d(TAG, "uploadImage----onSuccess----out----result=" + response);
+                mTestButton.setClickable(true);
             }
         }, mFilePath);
 
@@ -133,7 +145,7 @@ public class TestActivity extends AppCompatActivity {
         intent.putExtra("outputY", 320);
         intent.putExtra("scale", true);
         // 图片格式
-        intent.putExtra("outputFormat", "png");
+        intent.putExtra("outputFormat", Bitmap.CompressFormat.JPEG.toString());
         // 取消人脸识别功能
         intent.putExtra("noFaceDetection", true);
         intent.putExtra("return-data", true);
