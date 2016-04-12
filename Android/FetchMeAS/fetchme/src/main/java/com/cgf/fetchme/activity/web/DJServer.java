@@ -41,7 +41,7 @@ public class DJServer {
 		client.post(getAbsoluteUrl(url), params, responseHandler);
 	}
 
-	public static void uploadImage(String url, RequestParams params, AsyncHttpResponseHandler responseHandler) {
+	public static void uploadImage(String url, RequestParams params, AsyncHttpResponseHandler responseHandler, String imageFilePath) {
 		Log.d(TAG, "uploadImage----in----");
 		if(params == null) {
 			params = new RequestParams();
@@ -49,7 +49,7 @@ public class DJServer {
 		params.put("csrfmiddlewaretoken", csrfToken);
 		params.put("title", "fileUpload");
 		try {
-			params.put("fileUpload", new File("/sdcard/DCIM/Camera/caffe/yorkshire_terrier_176.jpg"));
+			params.put("fileUpload", new File(imageFilePath));
 		} catch (FileNotFoundException e) {
 			Log.d(TAG, "file can not be found");
 			e.printStackTrace();

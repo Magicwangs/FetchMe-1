@@ -1,5 +1,6 @@
 package com.cgf.fetchme.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
             R.mipmap.ic_launcher,
             R.mipmap.ic_launcher,
     };
-
+    private long exitTime = 0;
     static {
     	try {
             Log.d(TAG, "load library----in----");
@@ -162,15 +163,15 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         String title = getString(R.string.app_name);
         switch (position) {
             case 0:
-//                fragment = new HomeFragment();
-                container_toolbar.setVisibility(View.VISIBLE);
-                title = getString(R.string.title_home);
-                getSupportActionBar().setTitle(title);
-                break;
-            case 1:
                 container_toolbar.setVisibility(View.GONE);
                 fragment = new FriendsFragment();
+                title = getString(R.string.title_home);
+                break;
+            case 1:
+//                fragment = new HomeFragment();
+                container_toolbar.setVisibility(View.VISIBLE);
                 title = getString(R.string.title_friends);
+                getSupportActionBar().setTitle(title);
                 break;
             case 2:
                 container_toolbar.setVisibility(View.GONE);
@@ -190,10 +191,28 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
             getSupportActionBar().setTitle(title);
         }
     }
+    public void takePicture(View view){
+        Intent testIntent = new Intent(MainActivity.this, TestActivity.class);
+        testIntent.putExtra("key","fromPic");
+        startActivity(testIntent);
+    }
+    public void openAlbum(View view){
+        Intent openAlbumIntent = new Intent(MainActivity.this, TestActivity.class);
+        openAlbumIntent.putExtra("key","fromAlbum");
+        startActivity(openAlbumIntent);
+    }
 
     @Override
     public void onBackPressed() {
         // TODO Auto-generated method stub
-        moveTaskToBack(true);
+        	moveTaskToBack(true);
+            if ((System.currentTimeMillis() - exitTime) > 2000) {
+                Toast.makeText(getApplicationContext(), "push again for exit",
+                        Toast.LENGTH_SHORT).show();
+                exitTime = System.currentTimeMillis();
+            } else {
+                android.os.Process.killProcess(android.os.Process.myPid()) ;
+                System.exit(0);
+            }
     }
 }

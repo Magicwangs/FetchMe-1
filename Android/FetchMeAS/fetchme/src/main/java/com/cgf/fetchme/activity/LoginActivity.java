@@ -23,8 +23,6 @@ import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.loopj.android.http.TextHttpResponseHandler;
 
-import cz.msebera.android.httpclient.Header;
-
 public class LoginActivity extends AppCompatActivity implements OnClickListener {
 
     private static final String TAG = "LoginActivity";
@@ -161,23 +159,8 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
                 mLoginResponse = gson.fromJson(response, LoginResponse.class);
                 if (mLoginResponse.getIsLogin()) {
                     DJServer.setCsrfToken(mLoginResponse.getCsrfToken());
-                    //					DJServer.post("get_name/", null, new AsyncHttpResponseHandler() {});
-
-                    DJServer.uploadImage("uploadImage/", null, new TextHttpResponseHandler() {
-                        @Override
-                        public void onFailure(int i, Header[] headers, String response, Throwable throwable) {
-                            Log.d(TAG, "uploadImage----onFailure----in----");
-                            Log.d(TAG, "uploadImage----onFailure----out----");
-                        }
-
-                        @Override
-                        public void onSuccess(int i, Header[] headers, String response) {
-                            Log.d(TAG, "uploadImage----onSuccess----in----");
-                            Log.d(TAG, "uploadImage----onSuccess----out----result=" + response);
-                        }
-                    });
-
                     Toast.makeText(LoginActivity.this, "login success", Toast.LENGTH_SHORT).show();
+                    GoMainUI();
                 } else {
                     Toast.makeText(LoginActivity.this, "login fail auth", Toast.LENGTH_SHORT).show();
                 }
