@@ -4,9 +4,6 @@ from django.template import RequestContext
 from django.template.context_processors import csrf
 from .models import User
 from .forms import UploadFileForm
-import sys
-sys.path.append('/home/cgf/caffeLabUsing/examples')
-import caffeRecongination
 
 # Create your views here.
 def index(request):
@@ -36,6 +33,9 @@ def uploadImage(request):
             with open(fileUploadName, 'wb+') as destination:
                 for chunk in request.FILES['fileUpload'].chunks():
                     destination.write(chunk)
+	    import sys
+	    sys.path.append('/home/cgf/caffeLabUsing/examples')
+	    import caffeRecongination
             result=caffeRecongination.reconginze('oxfordCatsAndDogs', fileUploadName)
             return HttpResponse("upload success %s" % result)
         return HttpResponse("upload failed")
