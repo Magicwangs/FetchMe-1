@@ -101,12 +101,12 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
         mUserName = inputName.getText().toString();
         mUserPwd = inputPassword.getText().toString();
 
-        if(mUserName.equals("admin") && mUserPwd.equals("admin")) {
-            GoMainUI();
-        }
-        else {
+//        if(mUserName.equals("admin") && mUserPwd.equals("admin")) {
+//            GoMainUI();
+//        }
+//        else {
             LoginOnline(mUserName, mUserPwd);
-        }
+//        }
         Log.d(TAG, "Login----out----" + "userName=" + mUserName + ",userPwd=" + mUserPwd);
     }
 
@@ -159,8 +159,8 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
                 mLoginResponse = gson.fromJson(response, LoginResponse.class);
                 if (mLoginResponse.getIsLogin()) {
                     DJServer.setCsrfToken(mLoginResponse.getCsrfToken());
-                    //					DJServer.post("get_name/", null, new AsyncHttpResponseHandler() {});
                     Toast.makeText(LoginActivity.this, "login success", Toast.LENGTH_SHORT).show();
+                    GoMainUI();
                 } else {
                     Toast.makeText(LoginActivity.this, "login fail auth", Toast.LENGTH_SHORT).show();
                 }

@@ -10,6 +10,17 @@ public class MainApplication extends Application {
 
     private static final String TAG = "MainApplication";
 
+    static {
+        try {
+            Log.d(TAG, "load library----in----");
+            System.loadLibrary("caffe");
+            System.loadLibrary("caffe_jni");
+            Log.d(TAG, "load library----out----");
+        } catch (UnsatisfiedLinkError ule) {
+            Log.d(TAG, ule.toString());
+        }
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();

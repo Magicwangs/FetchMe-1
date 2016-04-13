@@ -1,5 +1,6 @@
 package com.cgf.fetchme.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -10,7 +11,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -38,17 +38,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
             R.mipmap.ic_launcher,
             R.mipmap.ic_launcher,
     };
-
-    static {
-    	try {
-            Log.d(TAG, "load library----in----");
-            System.loadLibrary("caffe");
-            System.loadLibrary("caffe_jni");
-            Log.d(TAG, "load library----out----");
-        } catch (UnsatisfiedLinkError ule) {
-            Log.d(TAG, ule.toString());
-    	}
-    }
+    private long exitTime = 0;
 
     @Bind(R.id.container_toolbar)
     LinearLayout container_toolbar;
@@ -77,13 +67,13 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
     private void setupTabIcons() {
         TextView tabOne = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
-        tabOne.setText("One");
-        tabOne.setCompoundDrawablesWithIntrinsicBounds(0, tabIcons[0], 0, 0);
+        tabOne.setText("Dog");
+        //tabOne.setCompoundDrawablesWithIntrinsicBounds(0, tabIcons[0], 0, 0);
         tabLayout.getTabAt(0).setCustomView(tabOne);
 
         TextView tabTwo = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
-        tabTwo.setText("Two");
-        tabTwo.setCompoundDrawablesWithIntrinsicBounds(0, tabIcons[1], 0, 0);
+        tabTwo.setText("Cat");
+        //tabTwo.setCompoundDrawablesWithIntrinsicBounds(0, tabIcons[1], 0, 0);
         tabLayout.getTabAt(1).setCustomView(tabTwo);
     }
 
@@ -162,15 +152,15 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         String title = getString(R.string.app_name);
         switch (position) {
             case 0:
-//                fragment = new HomeFragment();
-                container_toolbar.setVisibility(View.VISIBLE);
-                title = getString(R.string.title_home);
-                getSupportActionBar().setTitle(title);
-                break;
-            case 1:
                 container_toolbar.setVisibility(View.GONE);
                 fragment = new FriendsFragment();
+                title = getString(R.string.title_home);
+                break;
+            case 1:
+//                fragment = new HomeFragment();
+                container_toolbar.setVisibility(View.VISIBLE);
                 title = getString(R.string.title_friends);
+                getSupportActionBar().setTitle(title);
                 break;
             case 2:
                 container_toolbar.setVisibility(View.GONE);
@@ -190,10 +180,28 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
             getSupportActionBar().setTitle(title);
         }
     }
+    public void takePicture(View view){
+        Intent testIntent = new Intent(MainActivity.this, TestActivity.class);
+        testIntent.putExtra("key","fromPic");
+        startActivity(testIntent);
+    }
+    public void openAlbum(View view){
+        Intent openAlbumIntent = new Intent(MainActivity.this, TestActivity.class);
+        openAlbumIntent.putExtra("key","fromAlbum");
+        startActivity(openAlbumIntent);
+    }
 
     @Override
     public void onBackPressed() {
         // TODO Auto-generated method stub
-        moveTaskToBack(true);
+        	moveTaskToBack(true);
+            if ((System.currentTimeMillis() - exitTime) > 2000) {
+                Toast.makeText(getApplicationContext(), "push again for exit",
+                        Toast.LENGTH_SHORT).show();
+                exitTime = System.currentTimeMillis();
+            } else {
+                android.os.Process.killProcess(android.os.Process.myPid()) ;
+                System.exit(0);
+            }
     }
 }

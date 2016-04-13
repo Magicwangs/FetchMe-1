@@ -106,5 +106,7 @@ echo 'done'
 
 python GetRealRateTraining.py
 python GetRealRateValing.py
+python GetRealRateSynset.py
 `cp RealRateTraining.txt $CLASSDATADIR/train.txt`
 `cp RealRateValing.txt $CLASSDATADIR/val.txt`
+`cp synset_words.txt $CLASSDATADIR/synset_words.txt`
